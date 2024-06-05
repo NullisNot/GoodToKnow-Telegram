@@ -1,0 +1,15 @@
+{
+    "properties": [
+      {
+        "name": "telegram.bot.token",
+        "type": "java.lang.String",
+        "description": "The token of the Telegram bot"
+      },
+      {
+        "name": "telegram.chat.id",
+        "type": "java.lang.String",
+        "description": "The chat ID of the Telegram channel or group"
+      }
+    ]
+  }
+  

@@ -2,6 +2,7 @@ package com.example.telegramnotifications.controller;
 
 import com.example.telegramnotifications.service.TelegramService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ public class TelegramController {
     private TelegramService telegramService;
 
     @PostMapping("/send")
+    @CrossOrigin(origins = "http://localhost:4200")
     public String sendMessage(@RequestBody MessageRequest messageRequest) {
         System.out.println("Received request to send message: " + messageRequest.getMessage());
         telegramService.sendMessage(messageRequest.getMessage());
